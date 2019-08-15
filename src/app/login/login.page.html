@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="container">
+
+    <div class="left">
+      <img src="../../assets/suite.jpg">
+    </div>
+
+    <div class="right" style="flex-grow: 3">
+      <div class="logo">
+        <img src="../../assets/UzuriLogo.PNG">
+      </div>
+
+      <p id="err">{{error}}</p>
+
+      <div class="inputs">
+        <input type="email" placeholder="Enter Email" [(ngModel)]="email">
+        
+
+        <input type="password" placeholder="Enter Password" [(ngModel)]="password">
+      </div>
+
+      <div class="navigation">
+        <input type="button" value="Login" (click)=" login()">
+        <!-- <label>Forgot Password?</label> -->
+        <br>
+        
+      </div>
+    </div>
+
+
+
+
+  </div>
+</ion-content>

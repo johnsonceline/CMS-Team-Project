@@ -1,0 +1,94 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <div class="container">
+      <input type="file" name="image" id="img" [(ngModel)]="suite.Image">
+
+      <ion-item>
+          <ion-label floating>Room Name</ion-label>
+          <ion-input [(ngModel)]="suite.Name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>In this room</ion-label>
+            <ion-select [(ngModel)]="suite.Type">
+              <ion-select-option  *ngFor="let x of roomType" value="{{x}}">{{x}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+      <ion-item>
+          <ion-label>Features</ion-label>
+          <ion-select multiple="true" [(ngModel)]="suite.features" >
+            <ion-select-option *ngFor="let n of features" value="{{n}}">{{n}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>No. of beds</ion-label>
+            <ion-select [(ngModel)]="suite.Bed" >
+              <ion-select-option  *ngFor="let s of beds" value="{{s}}">{{s}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>No. of baths</ion-label>
+            <ion-select [(ngModel)]="suite.Bathroom">
+              <ion-select-option  *ngFor="let a of baths" value="{{a}}">{{a}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Notes</ion-label>
+            <ion-textarea rows="6" cols="10" [(ngModel)]="suite.Description"></ion-textarea>
+          </ion-item>
+
+          <ion-button color="dark" (click)="changeListener(pic)">
+              Send
+          </ion-button>
+        
+      </div>
+   
+</ion-content>
+
+
+        <!-- <div class="image">
+          
+          <ion-input type="file" placeholder="add image" [(ngModel)]="suite.Image" class="p"></ion-input>
+        </div>
+        <div class="form">
+            <ion-input type="text" placeholder="Name" [(ngModel)]="suite.Name" class="p"></ion-input>
+            <ion-select [(ngModel)]="suite.Type" class="slct">
+              <ion-select-option disabled selected> - Pick Room Type -</ion-select-option>
+              <ion-select-option>Double Room</ion-select-option>
+              <ion-select-option>Single Room</ion-select-option>
+              <ion-select-option>Family Room</ion-select-option>
+            </ion-select>
+            <ion-input type="text" placeholder="Price" [(ngModel)]="suite.Price" class="p"></ion-input>
+            <ion-select [(ngModel)]="suite.Bed" class="slct">
+              <ion-select-option disabled selected> - No. of bedrooms -</ion-select-option>
+              <ion-select-option>1 Bed</ion-select-option>
+              <ion-select-option>2 Beds</ion-select-option>
+              <ion-select-option>3 Beds</ion-select-option>
+            </ion-select>
+            <ion-select [(ngModel)]="suite.Bathroom" class="slct">
+              <ion-select-option disabled selected> - No. of bathrooms -</ion-select-option>
+              <ion-select-option>1 Bathroom</ion-select-option>
+              <ion-select-option>2 Bathrooms</ion-select-option>
+              <ion-select-option>3 Bathrooms</ion-select-option>
+            </ion-select>
+            <ion-textarea placeholder="Description" [(ngModel)]="suite.Description" class="p"></ion-textarea>
+      
+            <div class="feat1">
+              <ion-textarea placeholder="Features" [(ngModel)]="suite.features" class="p"></ion-textarea>
+            </div>
+            
+      <ion-button color="dark" (click)="changeListener(pic)">
+          Send
+      </ion-button>
+           <button (click)="changeListener(pic)">Send</button> 
+        </div> -->
